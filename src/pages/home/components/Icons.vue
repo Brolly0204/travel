@@ -9,6 +9,7 @@
           <p class="icon-desc">{{item.desc}}</p>
         </div>
       </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -17,7 +18,9 @@
 export default {
   data() {
     return {
-      swiperOption: {},
+      swiperOption: {
+        pagination: '.swiper-pagination'
+      },
       iconList: [
         {
           id: '001',
@@ -96,12 +99,15 @@ export default {
 
 .icons >>> .swiper-container
   height 0
-  padding-bottom 50%
+  padding-bottom 55%
+
+.icons >>> .swiper-pagination-bullets
+  bottom -.04rem
 
 .icons
   width 100%
   height 0
-  padding-bottom 50%
+  padding-bottom 55%
   overflow hidden
 
   .icon
