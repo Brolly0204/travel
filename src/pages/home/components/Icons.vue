@@ -105,10 +105,7 @@ export default {
   bottom -.04rem
 
 .icons
-  width 100%
-  height 0
-  padding-bottom 55%
-  overflow hidden
+  margin-top .1rem
 
   .icon
     position relative
