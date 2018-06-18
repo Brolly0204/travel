@@ -16,74 +16,22 @@
 
 <script>
 export default {
+  name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data() {
     return {
       swiperOption: {
         pagination: '.swiper-pagination'
-      },
-      iconList: [
-        {
-          id: '001',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'
-        },
-        {
-          id: '002',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-          desc: '必游榜单'
-        },
-        {
-          id: '003',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
-          desc: '故宫'
-        },
-        {
-          id: '004',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'
-        },
-        {
-          id: '005',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-          desc: '必游榜单'
-        },
-        {
-          id: '006',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
-          desc: '故宫'
-        },
-        {
-          id: '007',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'
-        },
-        {
-          id: '008',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-          desc: '必游榜单'
-        },
-        {
-          id: '009',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
-          desc: '故宫'
-        }
-      ]
+      }
     }
   },
   computed: {
     // icon多页切换处理
     iconPage() {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         let page = Math.floor(index / 8)
         pages[page] = !pages[page] ? [item] : [...pages[page], item]
       })

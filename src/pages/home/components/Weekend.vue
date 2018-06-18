@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item" v-for="item in recommendList" :key="item.id">
+      <li class="item" v-for="item in list" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" :alt="item.title">
         </div>
@@ -18,48 +18,9 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data() {
-    return {
-      recommendList: [
-        {
-          id: '001',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg',
-          title: '北京欢乐水魔方',
-          desc: '北京欢乐水魔方演出，High翻全场乐不停'
-        },
-        {
-          id: '002',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg',
-          title: '北京欢乐水魔方',
-          desc: '北京欢乐水魔方演出，High翻全场乐不停'
-        },
-        {
-          id: '003',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg',
-          title: '北京欢乐水魔方',
-          desc: '北京欢乐水魔方演出，High翻全场乐不停'
-        },
-        {
-          id: '004',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg',
-          title: '北京欢乐水魔方',
-          desc: '北京欢乐水魔方演出，High翻全场乐不停'
-        },
-        {
-          id: '005',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg',
-          title: '北京欢乐水魔方',
-          desc: '北京欢乐水魔方演出，High翻全场乐不停'
-        }
-      ]
-    }
-  },
-  components: {}
+  props: {
+    list: Array
+  }
 }
 </script>
 
@@ -67,14 +28,13 @@ export default {
 @import '~styles/mixins.styl'
 
   .title
-    margin-top 0.1rem
     line-height 0.8rem
     background-color #eeeeee
     text-indent 0.2rem
   .item-img-wrapper
     height 0
     overflow hidden
-    padding-bottom 37%
+    padding-bottom 37.09%
     background-color #f1f1f1
     .item-img
       width 100%
