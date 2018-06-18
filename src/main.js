@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import 'babel-polyfill'
 import App from './App'
 import router from './router'
 import 'styles/reset.css'

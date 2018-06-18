@@ -27,10 +27,11 @@ export default {
     }
   },
   created() {
-    getHomeInfo().then(this.getHomeData)
+    this.getHomeData()
   },
   methods: {
-    getHomeData(response) {
+    async getHomeData() {
+      const response = await getHomeInfo()
       let result = response.data
       if (result.ret && result.data) {
         let { city, swiperList, iconList, recommendList, weekendList } = result.data
